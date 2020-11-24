@@ -1,18 +1,25 @@
-import React from 'react';
-import { Button, Typography } from '@material-ui/core';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './Assets/Theme.js';
-import Login from './components/Login'
+
+import Login from './components/Login/index';
+import Dashboard from './components/Dashboard/Dashboard';
+import Other from './components/Others/Other';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-          <p>Inicializando proyecto diamond generating</p>
-          <Button variant="contained" color="primary">Hey botón de material UI</Button>
-          <p>También ya está instalado react-router-dom y material ui icons</p>
-          <Login />
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/dashboard" render={() => <Dashboard />} />
+            <Route path="/other" render={() => <Other />} />
+            <Route exact path="/" render={() => <Login />} />
+          </Switch>
+        </div>
+      </Router>
     </ThemeProvider>
   );
 }
