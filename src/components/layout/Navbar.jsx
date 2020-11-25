@@ -66,7 +66,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Avatar from '@material-ui/core/Avatar';
-import Menu from './Menu';
+import Menu from './MenuAvatar';
 
 function Navbar() {
     return (
