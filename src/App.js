@@ -8,9 +8,13 @@ import Login from './components/Login/index';
 import Dashboard from './components/Dashboard/Dashboard';
 import Legal from './components/Legal/LegalView';
 
+import Routes from './components/Routes/index.jsx';
+
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
+
       <Router>
         <div>
           <Switch>
@@ -20,6 +24,9 @@ function App() {
           </Switch>
         </div>
       </Router>
+
+          <Routes />
+
     </ThemeProvider>
   );
 }
