@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { auth } from '../../firebase-config';
 import useStyles from '../../Assets/styles';
 import { Button, Checkbox, FormControlLabel, Grid, Input, Typography } from '@material-ui/core';
@@ -80,8 +81,10 @@ const Login = () => {
                     </div>
                 </form>
                 <Button variant="contained" color='secondary'>
-                    Ingresar
-               </Button>
+                    <Link to='/dashboard'>
+                        Ingresar
+                    </Link>
+                </Button>
                 <div className={classes.remeberOpt}>
                     <FormControlLabel
                         value="end"

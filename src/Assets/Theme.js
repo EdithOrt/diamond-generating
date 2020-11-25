@@ -27,6 +27,12 @@ const Theme = createMuiTheme({
             letterSpacing: 0,
             color: '#F4796B'
         },
+        h6: {
+            textTransform: 'none',
+            fontSize: '15px',
+            color: ' #ffffff',
+            fontWeight: 400
+        },
         body1: {
             letterSpacing: 0,
             color: '#ffffff',

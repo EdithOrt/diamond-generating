@@ -48,7 +48,76 @@ const useStyles = makeStyles({
     root: {
         width: '70%',
         height: '60%',
-    }
+    },
+    bckNavbar: {
+        background: '#fafafa'
+    },
+    link: {
+        textDecoration: 'none'
+    },
+    //menu
+    menu: {
+        display: 'flex'
+    },
+    appbar: {
+        background: '#1D376C',
+        height: '100vh',
+        width: '80px'
+    },
+    logoMenu: {
+        width: '50px',
+        margin: '10px',
+        position: 'relative',
+        top: '20px',
+        left: '10px',
+    },
+    logoMenu2: {
+        width: '75px',
+        margin: '10px',
+        position: 'relative',
+        top: '20px',
+        left: '30px',
+    },
+    optMenu: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        height: '175px',
+        position: 'relative',
+        top: '40px',
+        left: '19px'
+    },
+    iconDrawer2: {
+        fontSize: '20px',
+        color: ' #ffffff',
+        position: 'relative',
+        left: '12px',
+    },
+    //drawer
+    drawer: {
+        background: '#1D376C !important',
+        width: '250px'
+    },
+    iconDrawer: {
+        fontSize: '20px',
+        color: ' #ffffff',
+        position: 'relative',
+        left: '12px',
+    },
+    listDrawer: {
+        position: 'relative',
+        top: '20px'
+    },
+    btnDrawerOpt: {
+        width: '200px',
+        display: 'flex !important',
+        justifyContent: 'flex-start !important',
+    },
+    divider: {
+        borderBottom: 'solid 1px #ffffff',
+        margin: '10px',
+    },
+
 });
 
 export default useStyles;
