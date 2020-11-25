@@ -6,7 +6,7 @@ import theme from './Assets/Theme.js';
 
 import Login from './components/Login/index';
 import Dashboard from './components/Dashboard/Dashboard';
-import Other from './components/Others/Other';
+import Legal from './components/Legal/LegalView';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <div>
           <Switch>
             <Route path="/dashboard" render={() => <Dashboard />} />
-            <Route path="/other" render={() => <Other />} />
+            <Route path="/legal" render={() => <Legal />} />
             <Route exact path="/" render={() => <Login />} />
           </Switch>
         </div>

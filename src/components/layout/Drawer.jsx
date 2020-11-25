@@ -43,7 +43,7 @@ export default function SwipeableTemporaryDrawer() {
             <List className={classes.listDrawer}  >
                 <div>
                     <ListItem>
-                        <Link to='/other' >
+                        <Link to='/legal' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
                                     <AddCircleOutlineIcon className={classes.iconDrawer} />
@@ -55,7 +55,7 @@ export default function SwipeableTemporaryDrawer() {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link to='/other' >
+                        <Link to='/legal' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
                                     <AssignmentIcon className={classes.iconDrawer} />
@@ -67,7 +67,7 @@ export default function SwipeableTemporaryDrawer() {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link to='/other' >
+                        <Link to='/legal' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
                                     <CreateOutlinedIcon className={classes.iconDrawer} />
@@ -81,7 +81,7 @@ export default function SwipeableTemporaryDrawer() {
                 </div>
                 <div className={classes.divider}></div>
                 <ListItem>
-                    <Link to='/other' >
+                    <Link to='/legal' >
                         <Button className={classes.btnDrawerOpt}>
                             <ListItemIcon>
                                 <SettingsOutlinedIcon className={classes.iconDrawer} />
