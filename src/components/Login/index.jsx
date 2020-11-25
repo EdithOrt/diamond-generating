@@ -81,7 +81,7 @@ const Login = () => {
                     </div>
                 </form>
                 <Button variant="contained" color='secondary'>
-                    <Link to='/dashboard'>
+                    <Link to='/dashboard' className={classes.link}>
                         Ingresar
                     </Link>
                 </Button>

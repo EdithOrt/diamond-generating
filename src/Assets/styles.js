@@ -53,7 +53,9 @@ const useStyles = makeStyles({
         background: '#fafafa'
     },
     link: {
-        textDecoration: 'none'
+        textDecoration: 'none',
+        color: '#ffffff',
+        textTransform: 'none',
     },
     //menu
     menu: {
@@ -117,7 +119,34 @@ const useStyles = makeStyles({
         borderBottom: 'solid 1px #ffffff',
         margin: '10px',
     },
-
+    //legal table
+    browserLegal: {
+        margin: '30px 0 20px 73px'
+    },
+    tableContainer: {
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    // all petitions
+    browserPetition: {
+        display: ' flex',
+        justifyContent: 'space-between',
+        margin: '20px 10px',
+    },
+    tablePetitions: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: '20px'
+    },
+    cardsPetitions: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'flex-start',
+        margin: '20px'
+    }
 });
 
 export default useStyles;
