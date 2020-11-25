@@ -1,9 +1,9 @@
 import React from 'react';
 import Request from './Request'
-import { Container, Grid, Paper } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import SearchIcon from '@material-ui/icons/Search';
-import IconButton from '@material-ui/core/IconButton';
+import Browser from '../Browser';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,11 +20,7 @@ const SectionRequests = () => {
 
     return ( 
         <Container fixed className={classes.root}>
-            <Paper component="form">
-                <IconButton type="submit" className={classes.iconButton} aria-label="search">
-                    <SearchIcon />
-                </IconButton>
-            </Paper>
+            <Browser />
             <Grid container spacing={3} className={classes.grid}>
                 <Grid item xs={4} spacing={2}>
                     <Request />

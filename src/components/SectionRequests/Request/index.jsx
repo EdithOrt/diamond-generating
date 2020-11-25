@@ -22,6 +22,37 @@ const useStyles = makeStyles((theme) => ({
       },
       box1: {
           marginTop: 20
+      },
+      box2: {
+          display: 'flex',
+          backgroundColor: 'rgba(241, 230, 125, 0.35)', //amarillo claro #F1E67D
+          width: '108px',
+          borderRadius: '100px',
+          justifyContent: 'center'
+      },
+      typographyTime: {
+          marginTop: 3,
+          marginLeft: 4,
+          fontSize: '14px',
+          color: '#FFE602', //amarillo
+          opacity: '1',
+      },
+      typographyPercentage: {
+          display: 'flex',
+          justifyContent: 'flex-end'
+      },
+      typographyTitle: {
+          color: '#393939', //gris oscuro
+          fontSize: '20px'
+          
+      },
+      typographyDescription: {
+          color: '#393939',
+          fontSize: '14px'
+      },
+      timeIcon: {
+          width: '16px',
+          color: '#FFE602'
       }
 }))  
 
@@ -45,23 +76,24 @@ const Request = () => {
               subheader="September 14, 2016"
             />
             <CardContent>
-                <Typography variant="body1" color="textSecondary" component="p">
+                <Typography variant="body1" className={classes.typographyTitle} component="p">
                     Compra de local
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    This impressive paella is a perfect party dish and a fun meal to cook together with your
-                    guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                <Typography variant="body2" className={classes.typographyDescription} component="p">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipiscing elit. Id ut integer varius donec
+                    Ullamcorper venenatis consectetur ... 
                 </Typography>
                 <Box className={classes.box1}>
-                    <Typography variant="caption">
+                    <Typography className={classes.typographyPercentage} variant="caption">
                         75%
                     </Typography>
                     <LinearProgress variant="determinate" value={75} className={classes.bar} />
                 </Box>
-                <Box color="secondary">
-                    <AccessTimeSharpIcon />
-                    <Typography variant="caption">
-                        5 días
+                <Box className={classes.box2}>
+                    <AccessTimeSharpIcon className={classes.timeIcon} />
+                    <Typography className={classes.typographyTime} variant="caption">
+                        4 días
                     </Typography>
                 </Box>
             </CardContent>
