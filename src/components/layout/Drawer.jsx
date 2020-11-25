@@ -5,12 +5,11 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Divider from '@material-ui/core/Divider';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import CreateOutlinedIcon from '@material-ui/icons/CreateOutlined';
 import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-
+import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
+import GavelOutlinedIcon from '@material-ui/icons/GavelOutlined';
 import Typography from '@material-ui/core/Typography';
 import useStyles from '../../Assets/styles';
 import logo from '../../Assets/images/logo-menu.png';
@@ -43,7 +42,7 @@ export default function SwipeableTemporaryDrawer() {
             <List className={classes.listDrawer}  >
                 <div>
                     <ListItem>
-                        <Link to='/legal' >
+                        <Link to='/crear-solicitudes' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
                                     <AddCircleOutlineIcon className={classes.iconDrawer} />
@@ -55,10 +54,10 @@ export default function SwipeableTemporaryDrawer() {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link to='/legal' >
+                        <Link to='/dashboard' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
-                                    <AssignmentIcon className={classes.iconDrawer} />
+                                    <AssignmentOutlinedIcon className={classes.iconDrawer} />
                                 </ListItemIcon>
                                 <Typography variant="h6" >
                                     Solicitudes
@@ -67,7 +66,7 @@ export default function SwipeableTemporaryDrawer() {
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link to='/legal' >
+                        <Link to='/crear-firma' >
                             <Button className={classes.btnDrawerOpt}>
                                 <ListItemIcon>
                                     <CreateOutlinedIcon className={classes.iconDrawer} />
@@ -81,13 +80,25 @@ export default function SwipeableTemporaryDrawer() {
                 </div>
                 <div className={classes.divider}></div>
                 <ListItem>
-                    <Link to='/legal' >
+                    <Link to='/configuracion' >
                         <Button className={classes.btnDrawerOpt}>
                             <ListItemIcon>
                                 <SettingsOutlinedIcon className={classes.iconDrawer} />
                             </ListItemIcon>
                             <Typography variant="h6" >
                                 Configuración
+                            </Typography>
+                        </Button>
+                    </Link>
+                </ListItem>
+                <ListItem>
+                    <Link to='/legal' >
+                        <Button className={classes.btnDrawerOpt}>
+                            <ListItemIcon>
+                                <GavelOutlinedIcon className={classes.iconDrawer} />
+                            </ListItemIcon>
+                            <Typography variant="h6" >
+                                Legal
                             </Typography>
                         </Button>
                     </Link>
