@@ -1,17 +1,16 @@
 import React from 'react';
-import RequestSection from './RequestSection';
-import AppBarHeader from '../layout/AppBarHeader';
 import Menu from '../layout/Menu';
-function Dashboard() {
+import AppBarHeader from '../layout/AppBarHeader';
+function Signature() {
     return (
         <div style={{ display: 'flex' }}>
             <Menu />
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                <AppBarHeader title='Solicitudes' />
-                <RequestSection />
+                <AppBarHeader title='Crear firmas' />
+                <p>Aqui crearas firmas</p>
             </div>
         </div>
     );
 }
 
-export default Dashboard;
+export default Signature;
