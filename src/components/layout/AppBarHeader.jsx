@@ -3,6 +3,7 @@ import { AppBar, Badge, IconButton, Avatar, Typography, Box, MenuItem } from '@m
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
+import userImage from '../../Assets/images/user-img.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -53,7 +54,7 @@ const AppBarHeader = (props) => {
                         <NotificationsNoneOutlinedIcon />
                     </Badge>
                 </IconButton>
-                <Avatar className={classes.userAvatar} alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                <Avatar className={classes.userAvatar} alt="Remy Sharp" src={userImage} />
                 <ExpandMoreIcon className={classes.expandIcon} />
             </Box>
         </AppBar>
