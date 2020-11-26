@@ -8,10 +8,12 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { LinearProgress } from '@material-ui/core';
 import useStyles from '../../Assets/styles';
+import useData from '../../Assets/useData';
 
 export default function BasicTable() {
     const classes = useStyles();
-
+    const data = useData();
+    console.log(data);
     return (
         <TableContainer component={Paper} style={{ width: '85%' }}>
             <Table className={classes.table} aria-label="simple table">
@@ -26,78 +28,20 @@ export default function BasicTable() {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell component="th" scope="row">
-                            001
-                        </TableCell>
-                        <TableCell align="right">0123456</TableCell>
-                        <TableCell align="right">Paola Tapia</TableCell>
-                        <TableCell align="right">Compra de terreno </TableCell>
-                        <TableCell align="right">
-                            <LinearProgress variant="determinate" value={75} />
-                        </TableCell>
-                        <TableCell align="right">12 diciembre 2020</TableCell>
-                    </TableRow>
+                    {data.map((info) =>(
+                        <TableRow>
+                            <TableCell component="th" scope="row">
+                               {info.id}
+                            </TableCell>
+                            <TableCell align="right">0123456</TableCell>
+                            <TableCell align="right">Paola Tapia</TableCell>
+                            <TableCell align="right">Compra de terreno </TableCell>
+                            <TableCell align="right">
+                                <LinearProgress variant="determinate" value={75} />
+                            </TableCell>
+                            <TableCell align="right">12 diciembre 2020</TableCell>
+                        </TableRow>
+                    ))}
                 </TableBody>
             </Table>
         </TableContainer >
