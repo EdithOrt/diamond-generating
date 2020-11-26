@@ -1,14 +1,36 @@
-import React from 'react';
-import { Button } from '@material-ui/core'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './Assets/Theme.js';
+
+import Login from './components/Login/index';
+import Dashboard from './components/Dashboard/Dashboard';
+import Legal from './components/Legal/LegalView';
+import Settings from "./components/Settings/Settings.jsx";
+import Signature from "./components/Signature/Signature.jsx";
+import NewPetition from './components/NewPetition/NewPetition';
+import NewPetition2 from './components/NewPetition/NewPetition2';
 
 function App() {
-    return (
-      <div className="App">
-          <p>Inicializando proyecto diamond generating</p>
-          <Button variant="contained" color="primary">Hey botón de material UI</Button>
-          <p>También ya está instalado react-router-dom y material ui icons</p>
-      </div>
-    );
-  }
-  
-  export default App;
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/dashboard" render={() => <Dashboard />} />
+            <Route path="/legal" render={() => <Legal />} />
+            <Route exact path="/" render={() => <Login />} />
+            <Route path="/configuracion" render={() => <Settings />} />
+            <Route path="/crear-solicitudes2" render={() => <NewPetition />} />
+            <Route path="/crear-solicitudes" render={() => <NewPetition2 />} />
+            <Route path="/crear-firma" render={() => <Signature />} />
+
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;
