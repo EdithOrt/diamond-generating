@@ -146,6 +146,46 @@ const useStyles = makeStyles({
         display: 'flex',
         justifyContent: 'flex-start',
         margin: '20px'
+    },
+    //cardForm
+    containerForm: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '300px',
+        height: '400px',
+        padding: '10px',
+        border: '1px solid gray',
+        borderRadius: '10px'
+    },
+    inputTitleContainer: {
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    inputTitle: {
+        backgroundColor: '#c6f4f9',
+        borderTopLeftRadius: '10px',
+        borderTopRightRadius: '10px',
+        padding: '10px'
+    },
+    textarea: {
+        height: '150px',
+        border: '#dac8c8 solid 1px',
+        padding: '5px',
+        fontFamily: 'Poppins',
+        marginBottom: '10px',
+    },
+    optionTable: {
+        border: '#dac8c8 solid 1px',
+        borderRadius: '10px',
+        padding: '10px',
+        marginTop: '5px'
+    },
+    btnForm: {
+        float: 'right',
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '50%',
+        padding: '5px'
     }
 });
 
