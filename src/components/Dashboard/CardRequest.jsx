@@ -56,9 +56,11 @@ const useStyles = makeStyles((theme) => ({
       }
 }))  
 
-const Request = () => {
+const Request = ({info}) => {
 
     const classes = useStyles();
+
+
 
     return ( 
         <Card className={classes.root}>
@@ -73,16 +75,14 @@ const Request = () => {
                   <MoreVertIcon />
                 </IconButton>
               }
-              subheader="September 14, 2016"
+              subheader={info.creationDate}
             />
             <CardContent>
                 <Typography variant="body1" className={classes.typographyTitle} component="p">
-                    Compra de local
+                    {info.title}
                 </Typography>
                 <Typography variant="body2" className={classes.typographyDescription} component="p">
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Id ut integer varius donec
-                    Ullamcorper venenatis consectetur ... 
+                    {info.description} 
                 </Typography>
                 <Box className={classes.box1}>
                     <Typography className={classes.typographyPercentage} variant="caption">
