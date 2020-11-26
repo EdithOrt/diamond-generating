@@ -8,7 +8,6 @@ function Settings() {
             <Menu />
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
                 <AppBarHeader title='Configuración' />
-                <p>Aqui va nueva solicitudes</p>
             </div>
         </div>
     );
