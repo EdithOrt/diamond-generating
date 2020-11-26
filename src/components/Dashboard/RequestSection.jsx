@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import Request from './CardRequest.jsx';
+import CardRequest from './CardRequest.jsx';
 import Table from './Table';
 import { Button, Container, Grid } from '@material-ui/core';
 import Browser from './Browser';
 import useStyles from '../../Assets/styles';
+import useData from '../../Assets/useData'
 
 const SectionRequests = () => {
 
     const classes = useStyles();
+    const data = useData();
 
     const [allPetitions, setAllPetitions] = useState(false);
 
@@ -33,7 +35,11 @@ const SectionRequests = () => {
                         </div>
                         :
                         <div className={classes.cardsPetitions}>
-                            <Request />
+                            {data.map((info) => (
+                                <CardRequest
+                                info = {info}
+                                />
+                            ))}
                         </div>
                 }
             </Grid>

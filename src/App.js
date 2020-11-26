@@ -22,8 +22,8 @@ function App() {
             <Route path="/legal" render={() => <Legal />} />
             <Route exact path="/" render={() => <Login />} />
             <Route path="/configuracion" render={() => <Settings />} />
-            <Route path="/crear-solicitudes2" render={() => <NewPetition />} />
-            <Route path="/crear-solicitudes" render={() => <NewPetition2 />} />
+            <Route path="/crear-solicitudes" render={() => <NewPetition />} />
+            <Route path="/crear-solicitudes2" render={() => <NewPetition2 />} />
             <Route path="/crear-firma" render={() => <Signature />} />
 
           </Switch>
