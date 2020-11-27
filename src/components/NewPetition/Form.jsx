@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, TextField, Typography } from '@material-ui/core';
 import useStyles from '../../Assets/styles';
 import ModalTable from './ModalTable';
-import ModalPrueba from './ModalPrueba';
+import Prueba1 from '../ModalesPrueba/Prueba1';
 
 function Form() {
     const classes = useStyles();
@@ -25,9 +25,7 @@ function Form() {
                 </Typography>
                 <ModalTable />
                 <div className={classes.btnForm}>
-                    <Button variant="contained" color="primary">
-                        Si
-                    </Button>
+                    <Prueba1 />
                     <Button variant="contained" color="primary">
                         No
                     </Button>
