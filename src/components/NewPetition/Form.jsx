@@ -5,44 +5,42 @@ import ModalTable from './ModalTable';
 
 import Prueba1 from '../ModalesPrueba/Prueba1';
 
-import ModalPrueba from './ModalPrueba';
-import {db} from '../../firebase-config'
-import ModalTicket from './ModalTicket';
+import { db } from '../../firebase-config';
 
-function Form({id, setId}) {
+function Form({ id, setId }) {
     const classes = useStyles();
     let [data, setData] = useState({
         title: '',
         description: '',
-        creationDate:'edith',
-        author:'hola',
-        section:'tengo',
-        status:'sueño',
-        expired:':('
+        creationDate: 'edith',
+        author: 'hola',
+        section: 'tengo',
+        status: 'sueño',
+        expired: ':('
     });
 
-    const handleData = () =>{
+    const handleData = () => {
         db.collection('requests').add({
             title: data.title,
             description: data.description,
             creationDate: data.creationDate,
-            author:  data.author,
+            author: data.author,
             section: data.section,
             status: data.status,
             expired: data.expired
-        }).then((docRef)=>{
-            setId(docRef.id)
-            })
-        }
+        }).then((docRef) => {
+            setId(docRef.id);
+        });
+    };
 
-    const handleInput = (e) =>{
+    const handleInput = (e) => {
         setData({
             ...data,
-            [e.target.name] : e.target.value
-        })
-    }
+            [e.target.name]: e.target.value
+        });
+    };
 
-    console.log(data)
+    console.log(data);
     return (
         <div className={classes.containerForm}>
             <div className={classes.inputTitleContainer}>
@@ -53,7 +51,7 @@ function Form({id, setId}) {
                         </Typography>
                         <TextField name='title' onChange={handleInput} id="standard-basic"
                             placeholder='aqui va algo' fullWidth />
-                    </div>                       
+                    </div>
                     <textarea name='description' onChange={handleInput} placeholder="Describe tu solicitud" className={classes.textarea} />
                 </form>
             </div>

@@ -91,18 +91,6 @@ export default function SwipeableTemporaryDrawer() {
                         </Button>
                     </Link>
                 </ListItem>
-                <ListItem>
-                    <Link to='/legal' >
-                        <Button className={classes.btnDrawerOpt}>
-                            <ListItemIcon>
-                                <GavelOutlinedIcon className={classes.iconDrawer} />
-                            </ListItemIcon>
-                            <Typography variant="h6" >
-                                Legal
-                            </Typography>
-                        </Button>
-                    </Link>
-                </ListItem>
             </List >
         </div >
     );
