@@ -19,17 +19,8 @@ const PreviewDoc = ({id}) => {
         <Box style={{display:'flex'}}>
             <Menu />
             <Box style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                <AppBarHeader title='＜ Previsualizador de formato' />
-                <Box style={{display:'flex', justifyContent:'space-between', marginTop:'40px', marginLeft:'100px', marginRight:'100px'}}>
-                    <Link style={{textDecoration:'none', color:'white', backgroundColor:'#ABD9FF', paddingTop:'8px', paddingBottom:'8px', paddingLeft:'18px', paddingRight:'18px', borderRadius:'47px'}}>
-                        Cancelar
-                    </Link>
-                    <Link onClick={handleClickOpen} style={{textDecoration:'none', color:'white', backgroundColor:'#1D376C', paddingTop:'8px', paddingBottom:'8px', paddingLeft:'22px', paddingRight:'22px', borderRadius:'47px', display:'flex'}}>
-                        <SendIcon style={{marginRight:'5px'}} />
-                        Enviar
-                    </Link>
-                </Box>
-                <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', marginTop:'-5px'}}>
+                <AppBarHeader title='Previsualizador de formato' />
+                <Box style={{display:'flex', flexDirection:'column', alignItems: 'center', marginTop:'50px'}}>
                     <Box style={{display:'flex', flexDirection:'column', alignItems:'center' }}>
                         <Typography color="primary" style={{marginBottom:'18px'}}>
                             Previsualizador de formato
@@ -40,7 +31,6 @@ const PreviewDoc = ({id}) => {
                     </Box>
                     <Doc />
                 </Box>
-                <ModalTicket id={id} open={open} setOpen={setOpen} />
             </Box>
         </Box>
      );

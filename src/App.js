@@ -18,7 +18,7 @@ function App() {
   let [data, setData] = useState({
     title: '',
     description: '',
-    creationDate: 'edith',
+    creationDate: '26 de noviembre 2020',
     author: '',
     section: '',
     status: '',

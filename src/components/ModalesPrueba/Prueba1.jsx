@@ -80,9 +80,10 @@ export default function AlertDialog({ id, setId, data, setData }) {
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
                 classes={{ paper: classes.containerModal }}
+                maxWidth='lg'
             >
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-description" style={{ height: '100%', marginBottom: '0', display: 'flex' }}>
+                    <DialogContentText id="alert-dialog-description" style={{ height: '100%', marginBottom: '0', display: 'flex', justifyContent:'center' }}>
                         {
                             first ?
                                 <div className={classes.containerQuestion}>
@@ -123,8 +124,9 @@ export default function AlertDialog({ id, setId, data, setData }) {
                         }
                         {
                             fourth ?
-                                <div>
-                                    <Stepper />
+                            //style={{display:"flex", flexDirection:'column', alignItems:'center', width:'400px', height:'350px'}}
+                                <div style={{display:"flex", flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+                                    <Stepper style={{display:'flex', justifyContent:'center'}} />
                                     <Button variant="contained" color="primary" onClick={handleFourthChange}>
                                         enviar
                                     </Button>

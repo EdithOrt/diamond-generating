@@ -26,10 +26,9 @@ function Form({ id, setId, data, setData }) {
                 <form >
                     <div className={classes.inputTitle}>
                         <Typography variant="body2" color="primary">
-                            Título de solicitud
+                            Título de la solicitud
                         </Typography>
-                        <TextField name='title' onChange={handleInput} id="standard-basic"
-                            placeholder='aqui va algo' fullWidth />
+                        <TextField name='title' onChange={handleInput} id="standard-basic" fullWidth style={{color:'black !important'}} />
                     </div>
                     <textarea name='description' onChange={handleInput} placeholder="Describe tu solicitud" className={classes.textarea} />
                 </form>
@@ -41,11 +40,7 @@ function Form({ id, setId, data, setData }) {
                 </Typography>
                 <ModalTable />
                 <div className={classes.btnForm}>
-
                     <Prueba1 data={data} setData={setData} setId={setId} />
-
-
-
                     <Button variant="contained" color="primary">
                         No
                     </Button>
