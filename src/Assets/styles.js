@@ -156,6 +156,7 @@ const useStyles = makeStyles({
         padding: '10px',
         border: '1px solid gray',
         borderRadius: '10px'
+
     },
     inputTitleContainer: {
         display: 'flex',
@@ -169,6 +170,7 @@ const useStyles = makeStyles({
     },
     textarea: {
         height: '150px',
+        width: '95%',
         border: '#dac8c8 solid 1px',
         padding: '5px',
         fontFamily: 'Poppins',
@@ -186,7 +188,71 @@ const useStyles = makeStyles({
         justifyContent: 'space-between',
         width: '50%',
         padding: '5px'
-    }
+    },
+    //modal
+    containerModal: {
+        width: '70%',
+        height: '70%'
+    },
+
+    containerQuestion: {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        width: '100%'
+    },
+    //modal-column
+    containerCircle: {
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        margin: '20px 0'
+    },
+    circleColumn: {
+        color: '#000000 !important',
+        width: '25px',
+        height: '25px',
+        fontWeight: '500',
+    },
+    asamblyContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        textAlign: 'center',
+    },
+    containerAsambly: {
+        height: '100%',
+        justifyContent: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    columnSelected: {
+        width: '25px',
+        height: '25px',
+        background: '#c6f4f9',
+        borderRadius: '50px',
+        textAlign: 'center',
+        padding: '10px',
+        fontSize: '20px !important',
+        margin: '40px !important',
+    },
+    btnMembers: {
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        width: '300px',
+    },
+    containerAllMembers: {
+        height: '100 %',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
 });
 
 export default useStyles;

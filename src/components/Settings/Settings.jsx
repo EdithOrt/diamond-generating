@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '../layout/Menu';
 import AppBarHeader from '../layout/AppBarHeader';
 
-function Settings() {
+function Document() {
     return (
         <div style={{ display: 'flex' }}>
             <Menu />
@@ -13,4 +13,4 @@ function Settings() {
     );
 }
 
-export default Settings;
+export default Document;

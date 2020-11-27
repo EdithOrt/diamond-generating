@@ -6,28 +6,37 @@ import theme from './Assets/Theme.js';
 
 import Login from './components/Login/index';
 import Dashboard from './components/Dashboard/Dashboard';
-import Legal from './components/Legal/LegalView';
-import Settings from "./components/Settings/Settings.jsx";
+import Document from "./components/Settings/Settings";
 import Signature from "./components/Signature/Signature.jsx";
 import NewPetition from './components/NewPetition/NewPetition';
 import NewPetition2 from './components/NewPetition/NewPetition2';
-import PreviewDoc from './components/NewPetition/PreviewDoc'
+import PreviewDoc from './components/NewPetition/PreviewDoc';
+import Settings from './components/Settings/Settings';
 
 function App() {
   const [id, setId] = useState('');
+  let [data, setData] = useState({
+    title: '',
+    description: '',
+    creationDate: '26 de noviembre 2020',
+    author: '',
+    section: '',
+    status: '',
+    expired: ''
+  });
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <div>
           <Switch>
             <Route path="/dashboard" render={() => <Dashboard />} />
-            <Route path="/legal" render={() => <Legal />} />
             <Route exact path="/" render={() => <Login />} />
-            <Route path="/configuracion" render={() => <Settings />} />
             <Route path="/crear-solicitudes" render={() => <NewPetition />} />
-            <Route path="/crear-solicitudes2" render={() => <NewPetition2 id={id} setId={setId} />} />
+            <Route path="/crear-solicitudes2" render={() => <NewPetition2 setData={setData} data={data} id={id} setId={setId} />} />
             <Route path="/crear-firma" render={() => <Signature />} />
+            <Route path="/documento" render={() => <Document />} />
             <Route path="/vista-previa" render={() => <PreviewDoc id={id} />} />
+            <Route path="/configuracion" render={() => <Settings />} />
           </Switch>
         </div>
       </Router>

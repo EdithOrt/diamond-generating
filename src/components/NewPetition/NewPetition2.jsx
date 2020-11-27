@@ -5,7 +5,8 @@ import Browser from '../Dashboard/Browser';
 import useStyles from '../../Assets/styles';
 import { Button } from '@material-ui/core';
 import Form from './Form';
-function NewPetition({id, setId}) {
+
+function NewPetition({ id, setId, data, setData }) {
 
     const classes = useStyles();
     const [addPetition, setAddPetition] = useState(false);
@@ -29,7 +30,7 @@ function NewPetition({id, setId}) {
                     height: '100%'
                 }}>
                     <div>
-                        <Form id={id} setId={setId} />
+                        <Form id={id} setId={setId} data={data} setData={setData} />
                     </div>
                     {
                         addPetition ?

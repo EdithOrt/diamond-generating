@@ -19,27 +19,27 @@ export default function BasicTable() {
             <Table className={classes.table} aria-label="simple table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Código</TableCell>
-                        <TableCell align="right">Fecha de creación</TableCell>
-                        <TableCell align="right">Solicitud</TableCell>
-                        <TableCell align="right">Tipo</TableCell>
-                        <TableCell align="right">Estatus</TableCell>
-                        <TableCell align="right">Vence</TableCell>
+                        <TableCell style={{color:'#393939'}}>Código</TableCell>
+                        <TableCell style={{color:'#393939'}} align="right">Fecha de creación</TableCell>
+                        <TableCell style={{color:'#393939'}} align="right">Solicitud</TableCell>
+                        <TableCell style={{color:'#393939'}} align="right">Tipo</TableCell>
+                        <TableCell style={{color:'#393939'}} align="right">Estatus</TableCell>
+                        <TableCell style={{color:'#393939'}} align="right">Vence</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {data.map((info) =>(
                         <TableRow>
-                            <TableCell component="th" scope="row">
+                            <TableCell style={{color:'#616167'}} component="th" scope="row">
                                {info.id}
                             </TableCell>
-                            <TableCell align="right">0123456</TableCell>
-                            <TableCell align="right">Paola Tapia</TableCell>
-                            <TableCell align="right">Compra de terreno </TableCell>
-                            <TableCell align="right">
-                                <LinearProgress variant="determinate" value={75} />
+                            <TableCell style={{color:'#616167'}} align="right">{info.creationDate}</TableCell>
+                            <TableCell style={{color:'#616167'}} align="right">Roberto de Benito</TableCell>
+                            <TableCell style={{color:'#616167'}} align="right">{info.title}</TableCell>
+                            <TableCell style={{color:'#616167'}} align="right">
+                                <LinearProgress variant="determinate" value={info.status} />
                             </TableCell>
-                            <TableCell align="right">12 diciembre 2020</TableCell>
+                            <TableCell style={{color:'#616167'}} align="right">{info.expired}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

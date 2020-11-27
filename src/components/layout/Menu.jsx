@@ -13,13 +13,13 @@ function Dashboard() {
             <div className={classes.appbar}>
                 <Drawer />
                 <div className={classes.optMenu}>
-                    <Link to='/Legal' className={classes.link}>
+                    <Link to='/crear-solicitudes' className={classes.link}>
                         <AddCircleOutlineIcon className={classes.iconDrawer2} />
                     </Link>
-                    <Link to='/other' className={classes.link}>
+                    <Link to='/dashboard' className={classes.link}>
                         <AssignmentOutlinedIcon className={classes.iconDrawer2} />
                     </Link>
-                    <Link to='/other' className={classes.link}>
+                    <Link to='/crear-firma' className={classes.link}>
                         <CreateOutlinedIcon className={classes.iconDrawer2} />
                     </Link>
                 </div>
