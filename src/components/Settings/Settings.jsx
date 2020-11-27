@@ -7,10 +7,7 @@ function Document() {
         <div style={{ display: 'flex' }}>
             <Menu />
             <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                <AppBarHeader title='Previsualizador de formato ' />
-                <div>
-                    CREACION DE FIRMAS
-                </div>
+                <AppBarHeader title='Configuración' />
             </div>
         </div>
     );

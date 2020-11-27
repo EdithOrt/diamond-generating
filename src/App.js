@@ -6,7 +6,6 @@ import theme from './Assets/Theme.js';
 
 import Login from './components/Login/index';
 import Dashboard from './components/Dashboard/Dashboard';
-import Legal from './components/Legal/LegalView';
 import Document from "./components/Settings/Settings";
 import Signature from "./components/Signature/Signature.jsx";
 import NewPetition from './components/NewPetition/NewPetition';
@@ -22,7 +21,6 @@ function App() {
         <div>
           <Switch>
             <Route path="/dashboard" render={() => <Dashboard />} />
-            <Route path="/legal" render={() => <Legal />} />
             <Route exact path="/" render={() => <Login />} />
             <Route path="/crear-solicitudes" render={() => <NewPetition />} />
             <Route path="/crear-solicitudes2" render={() => <NewPetition2 id={id} setId={setId} />} />
