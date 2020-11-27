@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@material-ui/core';
 import useStyles from '../../Assets/styles';
 import ModalTable from './ModalTable';
+
+import Prueba1 from '../ModalesPrueba/Prueba1';
+
 import ModalPrueba from './ModalPrueba';
 import {db} from '../../firebase-config'
 import ModalTicket from './ModalTicket';
@@ -61,9 +64,13 @@ function Form({id, setId}) {
                 </Typography>
                 <ModalTable />
                 <div className={classes.btnForm}>
+
+                    <Prueba1 />
+
                     <Button onClick={handleData} variant="contained" color="primary">
                         Si
                     </Button>
+
                     <Button variant="contained" color="primary">
                         No
                     </Button>
