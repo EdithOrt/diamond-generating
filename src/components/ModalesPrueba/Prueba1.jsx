@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import { Typography } from '@material-ui/core';
 import Column from './Column';
 import useStyles from '../../Assets/styles';
 import AllMembers from './AllMembers';
 import Asambly from './Asambly';
 import Remember from './Remember';
+import Stepper from '../NewPetition/Stepper';
+import ModalTicket from '../NewPetition/ModalTicket';
 
 export default function AlertDialog() {
     const classes = useStyles();
@@ -109,9 +110,7 @@ export default function AlertDialog() {
                         {
                             fourth ?
                                 <div>
-                                    <Typography variant="h5" color="primary">
-                                        Aqui va el slider
-                                    </Typography>
+                                    <Stepper />
                                     <Button variant="contained" color="primary" onClick={handleFourthChange}>
                                         enviar
                                     </Button>
@@ -149,10 +148,13 @@ export default function AlertDialog() {
                                         alignItems: 'center',
                                     }}
                                 >
-                                    <div>aqui va lo de Edith</div>
-                                    <Button variant="contained" color="primary" onClick={handleClose}>
-                                        Enviar
+                                    <ModalTicket />
+
+                                    <Link to='/vista-previa'>
+                                        <Button variant="contained" color="primary" onClick={handleClose}>
+                                            Enviar
                                     </Button>
+                                    </Link>
                                 </div>
                                 :
                                 null

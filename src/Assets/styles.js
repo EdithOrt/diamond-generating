@@ -169,6 +169,7 @@ const useStyles = makeStyles({
     },
     textarea: {
         height: '150px',
+        width: '95%',
         border: '#dac8c8 solid 1px',
         padding: '5px',
         fontFamily: 'Poppins',
