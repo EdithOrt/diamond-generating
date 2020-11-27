@@ -5,6 +5,7 @@ import Menu from '../layout/Menu';
 import Prueba1 from '../ModalesPrueba/Prueba1';
 
 function Dashboard() {
+
     return (
         <div style={{ display: 'flex' }}>
             <Menu />
