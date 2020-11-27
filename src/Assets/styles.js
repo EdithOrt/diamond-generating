@@ -156,6 +156,7 @@ const useStyles = makeStyles({
         padding: '10px',
         border: '1px solid gray',
         borderRadius: '10px'
+
     },
     inputTitleContainer: {
         display: 'flex',
@@ -193,6 +194,7 @@ const useStyles = makeStyles({
         width: '70%',
         height: '70%'
     },
+
     containerQuestion: {
         height: '100%',
         display: 'flex',
@@ -250,6 +252,7 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
 });
 
 export default useStyles;

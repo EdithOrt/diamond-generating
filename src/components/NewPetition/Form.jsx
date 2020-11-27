@@ -7,31 +7,10 @@ import Prueba1 from '../ModalesPrueba/Prueba1';
 
 import { db } from '../../firebase-config';
 
-function Form({ id, setId }) {
+function Form({ id, setId, data, setData }) {
     const classes = useStyles();
-    let [data, setData] = useState({
-        title: '',
-        description: '',
-        creationDate: 'edith',
-        author: 'hola',
-        section: 'tengo',
-        status: 'sueño',
-        expired: ':('
-    });
 
-    const handleData = () => {
-        db.collection('requests').add({
-            title: data.title,
-            description: data.description,
-            creationDate: data.creationDate,
-            author: data.author,
-            section: data.section,
-            status: data.status,
-            expired: data.expired
-        }).then((docRef) => {
-            setId(docRef.id);
-        });
-    };
+
 
     const handleInput = (e) => {
         setData({
@@ -63,11 +42,9 @@ function Form({ id, setId }) {
                 <ModalTable />
                 <div className={classes.btnForm}>
 
-                    <Prueba1 />
+                    <Prueba1 data={data} setData={setData} setId={setId} />
 
-                    <Button onClick={handleData} variant="contained" color="primary">
-                        Si
-                    </Button>
+
 
                     <Button variant="contained" color="primary">
                         No

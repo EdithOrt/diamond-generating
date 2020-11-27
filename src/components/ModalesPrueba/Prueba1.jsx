@@ -12,8 +12,9 @@ import Asambly from './Asambly';
 import Remember from './Remember';
 import Stepper from '../NewPetition/Stepper';
 import ModalTicket from '../NewPetition/ModalTicket';
+import { db } from '../../firebase-config';
 
-export default function AlertDialog() {
+export default function AlertDialog({ id, setId, data, setData }) {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
 
@@ -53,6 +54,19 @@ export default function AlertDialog() {
     const handleFifthChange = () => {
         setFifth(false);
         setSixth(true);
+    };
+    const handleData = () => {
+        db.collection('requests').add({
+            title: data.title,
+            description: data.description,
+            creationDate: data.creationDate,
+            author: data.author,
+            section: data.section,
+            status: data.status,
+            expired: data.expired
+        }).then((docRef) => {
+            setId(docRef.id);
+        });
     };
 
     return (
@@ -151,7 +165,7 @@ export default function AlertDialog() {
                                     <ModalTicket />
 
                                     <Link to='/vista-previa'>
-                                        <Button variant="contained" color="primary" onClick={handleClose}>
+                                        <Button variant="contained" color="primary" onClick={handleData}>
                                             Enviar
                                     </Button>
                                     </Link>

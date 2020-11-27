@@ -15,6 +15,15 @@ import Settings from './components/Settings/Settings';
 
 function App() {
   const [id, setId] = useState('');
+  let [data, setData] = useState({
+    title: '',
+    description: '',
+    creationDate: 'edith',
+    author: '',
+    section: '',
+    status: '',
+    expired: ''
+  });
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -23,7 +32,7 @@ function App() {
             <Route path="/dashboard" render={() => <Dashboard />} />
             <Route exact path="/" render={() => <Login />} />
             <Route path="/crear-solicitudes" render={() => <NewPetition />} />
-            <Route path="/crear-solicitudes2" render={() => <NewPetition2 id={id} setId={setId} />} />
+            <Route path="/crear-solicitudes2" render={() => <NewPetition2 setData={setData} data={data} id={id} setId={setId} />} />
             <Route path="/crear-firma" render={() => <Signature />} />
             <Route path="/documento" render={() => <Document />} />
             <Route path="/vista-previa" render={() => <PreviewDoc id={id} />} />
