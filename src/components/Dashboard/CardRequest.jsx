@@ -10,7 +10,9 @@ import React from 'react';
 const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth: 306,
-        borderRadius: 0
+        minWidth: 300,
+        borderRadius: 0,
+        marginRight: '20px'
     },
 
     avatar: {
@@ -20,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
         height: 7,
         marginBottom: 10,
         borderRadius: 5
+    },
+    box:{
+        height:'110px'
     },
     box1: {
         marginTop: 20
@@ -79,12 +84,14 @@ const Request = ({ info }) => {
                 subheader={info.creationDate}
             />
             <CardContent>
-                <Typography variant="body1" className={classes.typographyTitle} component="p">
-                    {info.title}
-                </Typography>
-                <Typography variant="body2" className={classes.typographyDescription} component="p">
-                    {info.description}
-                </Typography>
+                <Box className={classes.box}>
+                    <Typography variant="body1" className={classes.typographyTitle} component="p">
+                        {info.title}
+                    </Typography>
+                    <Typography variant="body2" className={classes.typographyDescription} component="p">
+                        {info.description}
+                    </Typography>
+                </Box>
                 <Box className={classes.box1}>
                     <Typography className={classes.typographyPercentage} variant="caption">
                         75%

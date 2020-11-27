@@ -11,7 +11,7 @@ function Remember() {
             <Typography variant="h5" color="primary">
                 Recuerda
             </Typography>
-            <img src={tableRemember} alt="paper" style={{ width: '100%', margin: '20px' }} />
+            <img src={tableRemember} alt="paper" style={{ width:'720px' ,margin: '20px' }} />
         </div>
     );
 }

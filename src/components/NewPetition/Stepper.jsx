@@ -30,7 +30,8 @@ const tutorialSteps = [
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 400,
-    flexGrow: 1,
+    flexGrow: 0,
+    marginBottom:'15px'
   },
   header: {
     height: 50,
@@ -67,7 +68,7 @@ const Stepper = () => {
         />
       </Box>
       <Box style={{ height: '110px' }}>
-        <Paper style={{ backgroundColor: 'transparent' }} square elevation={0} className={classes.header}>
+        <Paper style={{ backgroundColor: 'transparent', textAlign:'center' }} square elevation={0} className={classes.header}>
           <Typography color='primary'>{tutorialSteps[activeStep].label}</Typography>
         </Paper>
       </Box>
@@ -78,15 +79,13 @@ const Stepper = () => {
           variant="text"
           activeStep={activeStep}
           nextButton={
-            <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-              Siguiente
+            <Button style={{color:'#393939'}} size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
                     {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
             </Button>
           }
           backButton={
-            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+            <Button style={{color:'#393939'}} size="small" onClick={handleBack} disabled={activeStep === 0}>
               {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-                    Atrás
                     </Button>
           }
         />
