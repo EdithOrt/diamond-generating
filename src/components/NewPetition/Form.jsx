@@ -4,8 +4,9 @@ import useStyles from '../../Assets/styles';
 import ModalTable from './ModalTable';
 import ModalPrueba from './ModalPrueba';
 import {db} from '../../firebase-config'
+import ModalTicket from './ModalTicket';
 
-function Form() {
+function Form({id, setId}) {
     const classes = useStyles();
     let [data, setData] = useState({
         title: '',
@@ -26,10 +27,10 @@ function Form() {
             section: data.section,
             status: data.status,
             expired: data.expired
-        }).then(()=>{
-            console.log('se envío data')
-        })
-    }
+        }).then((docRef)=>{
+            setId(docRef.id)
+            })
+        }
 
     const handleInput = (e) =>{
         setData({

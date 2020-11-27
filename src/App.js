@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { ThemeProvider } from '@material-ui/core/styles';
@@ -11,8 +11,10 @@ import Settings from "./components/Settings/Settings.jsx";
 import Signature from "./components/Signature/Signature.jsx";
 import NewPetition from './components/NewPetition/NewPetition';
 import NewPetition2 from './components/NewPetition/NewPetition2';
+import PreviewDoc from './components/NewPetition/PreviewDoc'
 
 function App() {
+  const [id, setId] = useState('');
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -23,9 +25,9 @@ function App() {
             <Route exact path="/" render={() => <Login />} />
             <Route path="/configuracion" render={() => <Settings />} />
             <Route path="/crear-solicitudes" render={() => <NewPetition />} />
-            <Route path="/crear-solicitudes2" render={() => <NewPetition2 />} />
+            <Route path="/crear-solicitudes2" render={() => <NewPetition2 id={id} setId={setId} />} />
             <Route path="/crear-firma" render={() => <Signature />} />
-
+            <Route path="/vista-previa" render={() => <PreviewDoc id={id} />} />
           </Switch>
         </div>
       </Router>
